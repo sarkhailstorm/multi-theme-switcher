@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useTheme } from "../context/ThemeContext";
 
 const Home = () => {
   const [products, setProducts] = useState<any[]>([]);
+  const { theme } = useTheme();
 
   /* Initially, display only 4 cards */
   const [view, setView] = useState(4);
@@ -15,7 +17,11 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className={`text-2xl font-bold mb-4`}>
+      <h1
+        className={`text-2xl font-bold mb-4 ${
+          theme === "theme2" ? "mt-16 md:mt-0" : ""
+        }`}
+      >
         Welcome to the Multi-Theme Switcher App
       </h1>
       <p className="mb-4">
