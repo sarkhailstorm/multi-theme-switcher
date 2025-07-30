@@ -10,6 +10,8 @@ function App() {
   const { theme } = useTheme();
   return (
     <div className={`min-h-screen transition-all duration-500 ${theme} flex`}>
+
+      {/* Conditionally render Sidebar or Header based on theme */}
       {theme === 'theme2' ? <Sidebar /> : <Header />}
       <div className={`flex-1 p-4 ${theme === 'theme2' ? 'ml-48 pt-4' : 'pt-20'}`}>
         <Routes>
