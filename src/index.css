@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Merriweather&display=swap");
+
+.theme1 {
+  @apply bg-white text-black font-sans;
+}
+
+.theme2 {
+  @apply bg-gray-900 text-white font-serif;
+}
+
+.theme3 {
+  font-family: 'Pacifico', cursive;
+  @apply bg-yellow-100 text-pink-800;
+}
