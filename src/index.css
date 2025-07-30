@@ -11,5 +11,5 @@
 
 .theme3 {
   font-family: 'Pacifico', cursive;
-  @apply bg-yellow-100 text-pink-800;
+  @apply bg-indigo-600 text-white;
 }

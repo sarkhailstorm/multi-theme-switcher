@@ -11,7 +11,9 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-4 shadow-md text-white bg-white dark:bg-gray-900 z-50">
-      <div className="font-bold text-xl">MyApp</div>
+      <Link to={"/"}>
+        <div className="font-bold text-xl">Theme Switcher</div>
+      </Link>
 
       {/* Mobile menu button, only visible on small screens */}
       <div className="sm:hidden">

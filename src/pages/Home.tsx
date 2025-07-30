@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">
+      <h1 className={`text-2xl font-bold mb-4`}>
         Welcome to the Multi-Theme Switcher App
       </h1>
       <p className="mb-4">
@@ -45,7 +45,7 @@ const Home = () => {
           <button
             type="button"
             onClick={() => setView((prev) => prev + 4)}
-            className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
+            className="bg-gray-900 text-white px-4 py-2 rounded cursor-pointer"
           >
             See More
           </button>
