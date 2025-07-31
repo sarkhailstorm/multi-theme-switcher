@@ -3,8 +3,8 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
 import { useTheme } from './context/ThemeContext';
+import Contact from './pages/Contact';
 
 function App() {
   const { theme } = useTheme();
