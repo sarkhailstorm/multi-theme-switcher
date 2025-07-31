@@ -34,7 +34,7 @@ Follow these steps to run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/sarkhailstorm/multi-theme-app.git
+git clone https://github.com/sarkhailstorm/multi-theme-switcher.git
 cd multi-theme-app
 ```
 ### 2. Install Dependencies
