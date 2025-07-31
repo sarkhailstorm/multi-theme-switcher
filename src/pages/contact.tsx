@@ -14,6 +14,7 @@ const Contact = () => {
       }`}
     >
       <h1 className="text-3xl font-bold mb-4 border-b pb-2">Contact Us</h1>
+      
       <form className="max-w-md space-y-4">
         <input
           type="text"
