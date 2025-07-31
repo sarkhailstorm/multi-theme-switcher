@@ -26,8 +26,8 @@ const Home = () => {
       </h1>
       <p className="mb-4">
         How it works: To get started, select one of the three available themes
-        from the top right corner of the navbar. The page will automatically
-        update based on your selected theme.
+        from the dropdown. The page will automatically update based on your
+        selected theme.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -51,7 +51,13 @@ const Home = () => {
           <button
             type="button"
             onClick={() => setView((prev) => prev + 4)}
-            className="bg-gray-900 text-white px-4 py-2 rounded cursor-pointer"
+            className={`${
+              theme === "theme1"
+                ? "bg-black hover:bg-[#111]"
+                : theme === "theme2"
+                ? "bg-gray-900 border border-white hover:bg-gray-800 text-white"
+                : "bg-indigo-700 border border-white hover:bg-indigo-600 text-white"
+            } bg-gray-900 text-white px-4 py-2 rounded cursor-pointer`}
           >
             See More
           </button>
