@@ -46,7 +46,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full p-4 flex flex-col gap-4 transition-transform duration-300 z-40
+        className={`fixed top-0 left-0 h-full p-4 flex flex-col gap-6 transition-transform duration-300 z-40 shadow-black shadow-2xl
         ${
           theme === "theme1"
             ? "bg-white text-gray-900"

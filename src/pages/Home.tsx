@@ -1,19 +1,28 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useTheme } from "../context/ThemeContext";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   const [products, setProducts] = useState<any[]>([]);
   const { theme } = useTheme();
+  const [loading, setLoading] = useState(true);
 
   /* Initially, display only 4 cards */
   const [view, setView] = useState(4);
 
+
   useEffect(() => {
+    setLoading(true);
     axios
       .get("https://fakestoreapi.com/products")
-      .then((res) => setProducts(res.data));
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.error(err))
+      .finally(() => setLoading(false)); 
   }, []);
+
+  // Show spinner while loading
+  if (loading) return <Spinner />; 
 
   return (
     <div>
