@@ -1,69 +1,65 @@
-# React + TypeScript + Vite
+# Multi-Theme React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and accessible React application that supports dynamic theme switching across the entire app (light/dark/colored), includes multiple pages (Home, About, Contact), integrates with an external API, and uses best practices for performance and basic security.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Theme switcher with **persistent selection** (stored in `localStorage`)
+- Product list fetched from [FakeStore API](https://fakestoreapi.com/)
+- Built with **Tailwind CSS**
+- React Router for routing between **Home**, **About**, and **Contact**
+- Supports three distinct themes
+- Displays **loading spinner** during data fetch
+- Responsive layout
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React (Vite)**
+- **Tailwind CSS**
+- **React Router**
+- **Context API**
+- **Axios**
+- **Lucide Icons**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Setup Instructions
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sarkhailstorm/multi-theme-app.git
+cd multi-theme-app
+```
+### 2. Install Dependencies
+Make sure you have Node.js (v16+) and npm installed.
+```bash
+npm install
+```
+### 3. Start the Development Server
+```bash
+npm run dev
+```
+Then, open your browser and visit:
+```bash
+http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Directory Structure
+```bash
+src/
+│
+├── components/        # Reusable UI components (Navbar, ThemeToggle, etc.)
+├── context/           # ThemeContext (for theme switching logic)
+├── pages/             # Page components (Home, About, Contact)
+├── App.jsx            # Main App component with routes
+├── main.jsx           # App entry point
+└── index.css          # Tailwind CSS styles
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
