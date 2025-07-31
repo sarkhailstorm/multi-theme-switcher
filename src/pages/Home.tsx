@@ -25,7 +25,7 @@ const Home = () => {
   if (loading) return <Spinner />; 
 
   return (
-    <div>
+    <div className="py-6">
       <h1
         className={`text-2xl font-bold mb-4 ${
           theme === "theme2" ? "mt-16 md:mt-0" : ""

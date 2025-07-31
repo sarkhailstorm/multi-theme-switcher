@@ -9,7 +9,7 @@ const Contact = () => {
         theme === "theme1"
           ? "bg-white text-gray-900"
           : theme === "theme2"
-          ? "bg-gray-900 text-white"
+          ? "bg-gray-900 text-white py-16"
           : "bg-indigo-600 text-white"
       }`}
     >
